@@ -1,9 +1,6 @@
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 
-# Fast folder jumps
-zplug "rupa/z", use:z.sh
-
 # Remembering all the aliases is hard sometimes...
 zplug "djui/alias-tips"
 
@@ -32,6 +29,9 @@ zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
 
 # Tmux
 zplug "plugins/tmux", from:oh-my-zsh, if:"which tmux"
+
+# Fast folder jumps
+zplug "rupa/z", use:z.sh
 
 # JSON formatter. ex: `curl example.com/users.json | jq`
 zplug "stedolan/jq", \
