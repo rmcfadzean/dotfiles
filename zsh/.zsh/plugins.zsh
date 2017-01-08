@@ -23,4 +23,4 @@ zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
 # Theme
 # zplug "cusxio/delta-prompt", use:delta.zsh
 zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "intelfx/pure", use:pure.zsh, from:github, as:theme
