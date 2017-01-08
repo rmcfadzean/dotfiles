@@ -15,7 +15,7 @@ zplug "plugins/gem", from:oh-my-zsh
 zplug "plugins/chruby", from:oh-my-zsh
 zplug "plugins/bundler", from:oh-my-zsh
 
-zplug "creationix/nvm", use:nvm.sh
+zplug "lukechilds/zsh-nvm"
 
 zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
 zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
