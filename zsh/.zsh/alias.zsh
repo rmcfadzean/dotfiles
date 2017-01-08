@@ -1,6 +1,6 @@
-alias ll="ls -lahF --color=auto"
-alias ls="ls -hF --color=auto"
-alias lsl="ls -lhF --color=auto"
+alias ll="k -h"
+alias ls="k -h"
+alias lsl="k -h"
 
 alias cp="cp -r"
 alias scp="scp -r"
