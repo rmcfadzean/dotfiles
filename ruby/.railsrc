@@ -1,0 +1,3 @@
+--database=postgresql # The only real option
+--skip-test # Pref rspec
+--skip-action-cable # Normally not used
