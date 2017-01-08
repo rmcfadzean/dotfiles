@@ -1,0 +1,8 @@
+[color]
+  ui = auto
+
+[core]
+  excludesfile = ~/.gitignore
+
+[include]
+  path = ~/.gitconfig.local

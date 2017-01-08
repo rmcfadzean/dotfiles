@@ -1,0 +1,10 @@
+/node_modules
+
+/log
+/tmp
+/db/*.sqlite3
+
+/.bundle
+/vendor/bundle
+
+*.gem
