@@ -7,12 +7,15 @@ zplug "rupa/z", use:z.sh
 zplug "djui/alias-tips"
 
 zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
+
 zplug "plugins/git", from:oh-my-zsh
 
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/gem", from:oh-my-zsh
 zplug "plugins/chruby", from:oh-my-zsh
 zplug "plugins/bundler", from:oh-my-zsh
+
+zplug "creationix/nvm", use:nvm.sh
 
 zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
 zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"

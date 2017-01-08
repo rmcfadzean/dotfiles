@@ -7,3 +7,5 @@ export PAGER=less
 
 export CLICOLOR=1
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
+export NVM_DIR="$HOME/.nvm"
