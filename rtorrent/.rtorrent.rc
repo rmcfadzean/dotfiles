@@ -1,0 +1,11 @@
+session     = ~/.rtorrent
+directory   = /storage/Incoming
+
+download_rate = 0
+upload_rate = 20
+
+dht = auto
+dht_port = 6881
+peer_exchange = yes
+
+scgi_port = localhost:5000

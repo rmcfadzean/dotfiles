@@ -61,6 +61,12 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 * `r` is bound to reload the `.tmux.conf`
 * A slightly nicer theme
 
+### Rtorrent
+
+* Just a basic config
+* Systemd service script
+  * NOTE: because a `systemctl` alias auto-sudos I had to use `/usr/bin/systemctl --user restart rt`
+
 ### Tools
 
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for pretty diffs
