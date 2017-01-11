@@ -2,7 +2,7 @@
   ui = auto
 
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore.global
   pager = diff-so-fancy | less --tabs=2 -RFX
 
 [credential]
