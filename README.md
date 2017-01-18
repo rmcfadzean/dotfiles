@@ -20,7 +20,7 @@ Install GNU/Stow with your favourite package manger
 
 Clone the repo
 
-`git clone git@github.com:wonderbread/dotfiles.git ~/.dotfiles && cd $_`
+`git clone git@github.com:rmcfadzean/dotfiles.git ~/.dotfiles && cd $_`
 
 Run `stow [package]` for each `package` you want to install. For example to install the ruby dots you would use
 
