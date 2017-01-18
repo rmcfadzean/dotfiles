@@ -14,7 +14,7 @@ zplug "rimraf/k"
 
 # Ruby
 zplug "postmodern/chruby", from:github, use:"share/chruby/*.sh"
-zplug "wonderbread/zsh-ruby-install"
+zplug "rmcfadzean/zsh-ruby-install"
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/gem", from:oh-my-zsh
 zplug "plugins/chruby", from:oh-my-zsh
