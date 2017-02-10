@@ -1,3 +1,4 @@
 --database=postgresql # The only real option
 --skip-test # Pref rspec
 --skip-action-cable # Normally not used
+--skip-bundle # Generally working in docker containers, don't need it

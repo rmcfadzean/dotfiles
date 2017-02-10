@@ -1,0 +1,31 @@
+year: 2017
+github_user: rmcfadzean
+gem:
+  platform: "Gem::Platform::RUBY"
+  license: "MIT"
+author:
+  name: "Rob McFadzean"
+  email: "root@sphericalcube.net"
+  url: "https://github.com/rmcfadzean"
+versions:
+  ruby: "2.4.0"
+  rails: "5.0"
+
+generate:
+  cli: false
+  rails: false
+  security: false
+  pry: true
+  guard: true
+  rspec: true
+  reek: true
+  rubocop: true
+  scss_lint: false
+  git_hub: true
+  code_climate: false
+  gemnasium: true
+  travis: true
+  patreon: false
+
+publish:
+  sign: false
