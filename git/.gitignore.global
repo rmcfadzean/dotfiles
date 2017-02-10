@@ -8,3 +8,5 @@
 /vendor/bundle
 
 *.gem
+
+.vscode
