@@ -13,7 +13,7 @@ zplug "so-fancy/diff-so-fancy", as:command
 zplug "rimraf/k"
 
 # Ruby
-zplug "postmodern/chruby", from:github, use:"share/chruby/*.sh"
+zplug "postmodern/chruby", use:"share/chruby/{auto,chruby}.sh"
 zplug "rmcfadzean/zsh-ruby-install"
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/gem", from:oh-my-zsh

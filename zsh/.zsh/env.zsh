@@ -1,6 +1,6 @@
 export PATH=$HOME/bin:$PATH
 
-export EDITOR=vim
+export EDITOR=nano
 export VISUAL=vim
 
 export PAGER=less
