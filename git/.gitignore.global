@@ -10,3 +10,5 @@
 *.gem
 
 .vscode
+
+coverage
