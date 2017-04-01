@@ -9,7 +9,7 @@ zplug "plugins/gpg-agent", from:oh-my-zsh, if:"which gpg-agent"
 
 # Git
 zplug "plugins/git", from:oh-my-zsh
-zplug "so-fancy/diff-so-fancy", as:command
+zplug "so-fancy/diff-so-fancy", as:command, at:v0.11.4
 zplug "rimraf/k"
 
 # Ruby
