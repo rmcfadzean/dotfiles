@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:$PATH
+export PATH=$PATH:$HOME/bin:/opt/android-sdk/platform-tools
 
 export EDITOR=nano
 export VISUAL=vim
