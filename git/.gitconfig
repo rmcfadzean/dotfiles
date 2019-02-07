@@ -4,12 +4,13 @@
 [core]
   excludesfile = ~/.gitignore.global
   pager = diff-so-fancy | less --tabs=2 -RFX
+  editor = nano
 
 [credential]
-	helper = cache --timeout=3600
+  helper = cache --timeout=3600
 
 [include]
   path = ~/.gitconfig.local
-  
+
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://
