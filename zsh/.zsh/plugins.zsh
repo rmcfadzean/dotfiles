@@ -49,4 +49,5 @@ zplug "junegunn/fzf", use:"shell/*.zsh"
 # Theme
 # zplug "cusxio/delta-prompt", use:delta.zsh
 zplug "mafredri/zsh-async", from:github
-zplug "intelfx/pure", use:pure.zsh, from:github, as:theme
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
