@@ -16,7 +16,7 @@ Install GNU/Stow with your favourite package manger
 
 ```yay -S stow```
 
-```dnf install stow``
+```dnf install stow```
 
 ```apt-get install stow```
 
