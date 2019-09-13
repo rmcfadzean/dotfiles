@@ -1,16 +1,11 @@
-source ~/.zplug/init.zsh
+source ~/.zplugin/bin/zplugin.zsh
 
-for config (~/.zsh/*.zsh) source $config
+# for config (~/.zsh/*.zsh) source $config
+[[ -f ~/.zsh/init.zsh ]] && source ~/.zsh/init.zsh
 
-zplug "zplug/zplug"
+# Load additional distro-specific config files
+[[ -f ~/.zsh/$DISTRIB_ID/init.zsh ]] && source ~/.zsh/$DISTRIB_ID/init.zsh
 
-compinit
-
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-
-zplug load
+# For all your local configs.
+### DO NOT CHECK THIS FILE IN TO GIT!
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

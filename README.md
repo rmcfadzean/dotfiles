@@ -30,6 +30,8 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 ### Ruby
 
+**Hasn't been updated in awhile**
+
 * `gem` doesn't install docs by default
 * `rails new` uses sane defaults
   * Postgres
@@ -41,36 +43,36 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 ### Node.js
 
 * Use [NVM](https://github.com/creationix/nvm) to manage node versions
-* `.nvmrc` defaults to `7.4.0`
 
 ### Git
 
 * The start of a nice ignore and some defaults
-* Most aliasing done through `alias.zsh`
+* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for pretty diffs
+
 
 ### ZSH
 
-* Plugins managed with [zplug](https://github.com/zplug/zplug)
+* Plugins managed with [zplugin](https://github.com/zdharma/zplugin)
 * Case insensitive autocomplete
-* A collection of aliases [I'm a relative reference to a repository file](../blob/master/zsh/.zsh/aliases.zsh)
-* Theme is [intelfx's fork](https://github.com/intelfx/pure) of [pure](https://github.com/sindresorhus/pure)
+* A collection of [aliases](../blob/master/zsh/.zsh/aliases.zsh)
+* Theme is [pure](https://github.com/sindresorhus/pure)
 
 ### Tmux
+
+**Hasn't been updated in awhile**
 
 * `Ctrl-A` instead of `Ctrl-B` as prefix
 * `r` is bound to reload the `.tmux.conf`
 * A slightly nicer theme
 
-### Rtorrent
+### Nano
 
-* Just a basic config
-* Systemd service script
-  * NOTE: because a `systemctl` alias auto-sudos I had to use `/usr/bin/systemctl --user restart rt`
+* 2 Spaces. Always.
+* Highlighting
 
 ### Tools
 
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for pretty diffs
 * [z](https://github.com/rupa/z) for quick directory switching (the new `j`)
-* [jq](https://stedolan.github.io/jq/) sed for json
 * [fzf](https://github.com/junegunn/fzf) for nicer finding
 * [k](https://github.com/supercrabtree/k) is a nicer, git-aware `ls`

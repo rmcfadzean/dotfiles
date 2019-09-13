@@ -1,53 +1,55 @@
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-completions"
+
+# Two regular plugins loaded without tracking.
+zplugin light zsh-users/zsh-autosuggestions
+zplugin light zdharma/fast-syntax-highlighting
+
+zplugin light rimraf/k
+
+# Ansible
+zplugin snippet OMZ::plugins/ansible/ansible.plugin.zsh
 
 # Remembering all the aliases is hard sometimes...
-zplug "djui/alias-tips"
-
-zplug "plugins/ssh-agent", from:oh-my-zsh, if:"which ssh-agent"
-zplug "plugins/gpg-agent", from:oh-my-zsh, if:"which gpg-agent"
+zplugin load djui/alias-tips
 
 # Git
-zplug "plugins/git", from:oh-my-zsh
-zplug "so-fancy/diff-so-fancy", as:command
-zplug "rimraf/k"
-
-# Ruby
-zplug "postmodern/chruby", use:"share/chruby/{auto,chruby}.sh"
-zplug "rmcfadzean/zsh-ruby-install"
-zplug "plugins/ruby", from:oh-my-zsh
-zplug "plugins/gem", from:oh-my-zsh
-zplug "plugins/chruby", from:oh-my-zsh
-zplug "plugins/bundler", from:oh-my-zsh
+zplugin snippet OMZ::lib/git.zsh
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zplugin ice from"gh-r" as"program"
+zplugin load so-fancy/diff-so-fancy
 
 # Node
-zplug "lukechilds/zsh-nvm"
+zplugin load lukechilds/zsh-nvm
+zplugin snippet OMZ::plugins/yarn/yarn.plugin.zsh
+
+# Vagrant
+zplugin ice as"completion"
+zplugin snippet OMZ::plugins/vagrant/_vagrant
 
 # Docker
-zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
-zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
+zplugin ice as"completion"
+zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+zplugin ice as"completion"
+zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
 # Tmux
-zplug "plugins/tmux", from:oh-my-zsh, if:"which tmux"
+zplugin snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
 # Fast folder jumps
-zplug "rupa/z", use:z.sh
-
-# JSON formatter. ex: `curl example.com/users.json | jq`
-zplug "stedolan/jq", \
-    as:command, \
-    rename-to:jq, \
-    from:gh-r
-
-zplug "b4b4r07/enhancd", use:enhancd.sh
+zplugin load agkozak/zsh-z
 
 # A much nicer Ctrl-R history searcher
-zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf, use:"*linux*amd64*"
-zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
-zplug "junegunn/fzf", use:"shell/*.zsh"
+zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
+
+zplugin light "b4b4r07/enhancd"
 
 # Theme
-# zplug "cusxio/delta-prompt", use:delta.zsh
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplugin ice pick"async.zsh" src"pure.zsh"
+zplugin light sindresorhus/pure
 
+# Misc
+zplugin light chrissicool/zsh-256color
+zplugin light hlissner/zsh-autopair
+zplugin light mafredri/zsh-async
+
+# OMZ plugins
+zplugin snippet OMZ::plugins/rsync/rsync.plugin.zsh

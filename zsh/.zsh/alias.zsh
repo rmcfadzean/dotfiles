@@ -11,7 +11,13 @@ alias emacs="vim"
 alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
 
-
-alias trizen="yay"
-alias update="trizen -Syu"
 alias systemctl="sudo systemctl"
+
+alias p="cd $PROJECTS"
+
+alias path='echo -e ${PATH//:/\\n}'
+alias reload!='. ~/.zshrc'
+
+alias remoteip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+alias serve="python3 -m http.server 8005"
