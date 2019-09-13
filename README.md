@@ -14,9 +14,13 @@ PRs are welcome but not all will be accepted for the same reasons as above.
 
 Install GNU/Stow with your favourite package manger
 
-`pacaur -S stow`
-`apt-get install stow`
-`brew install stow`
+```yay -S stow```
+
+```dnf install stow``
+
+```apt-get install stow```
+
+```brew install stow```
 
 Clone the repo
 
