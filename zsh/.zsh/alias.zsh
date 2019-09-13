@@ -21,3 +21,8 @@ alias reload!='. ~/.zshrc'
 alias remoteip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 alias serve="python3 -m http.server 8005"
+
+# usage: rmd README.md
+rmd () {
+  pandoc $1 | lynx -stdin
+}
