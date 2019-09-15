@@ -14,8 +14,8 @@ zplugin load djui/alias-tips
 # Git
 zplugin snippet OMZ::lib/git.zsh
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
-zplugin ice from"gh-r" as"program"
-zplugin load so-fancy/diff-so-fancy
+zplugin ice as"program"
+zplugin snippet https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
 
 # Node
 zplugin load lukechilds/zsh-nvm
