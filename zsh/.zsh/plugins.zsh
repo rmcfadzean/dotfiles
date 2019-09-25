@@ -31,6 +31,8 @@ zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh
 zplugin ice as"completion"
 zplugin snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 
+zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+
 # Tmux
 zplugin snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
