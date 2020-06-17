@@ -1,4 +1,4 @@
-source ~/.zplugin/bin/zplugin.zsh
+source ~/.zinit/bin/zinit.zsh
 
 # for config (~/.zsh/*.zsh) source $config
 [[ -f ~/.zsh/init.zsh ]] && source ~/.zsh/init.zsh
