@@ -20,6 +20,8 @@ zinit snippet https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/th
 # Node
 zinit load lukechilds/zsh-nvm
 zinit snippet OMZ::plugins/yarn/yarn.plugin.zsh
+zinit ice atload"zicompinit; zicdreplay" atclone'./zplug.zsh'
+zinit light g-plane/zsh-yarn-autocompletions
 
 # Vagrant
 zinit ice as"completion"
