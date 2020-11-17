@@ -35,6 +35,10 @@ zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/z
 
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
+# AWS
+zinit ice as"completion"
+zinit snippet OMZ::plugins/aws/aws.plugin.zsh
+
 # Tmux
 zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
