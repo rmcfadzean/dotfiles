@@ -50,13 +50,25 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 ### Git
 
+#### Requirements
+
+* Install [delta](https://github.com/dandavison/delta) with your package manager of choice
+
+#### Config
+
 * The start of a nice ignore and some defaults
 * [delta](https://github.com/dandavison/delta) for pretty diffs
 
 
 ### ZSH
 
-* Plugins managed with [zplugin](https://github.com/zdharma/zplugin)
+#### Requirements
+
+* Install [fzf](https://github.com/junegunn/fzf)
+
+#### Config
+
+* Plugins managed with [zinit](https://github.com/zdharma/zinit)
 * Case insensitive autocomplete
 * A collection of [aliases](../blob/master/zsh/.zsh/aliases.zsh)
 * Theme is [pure](https://github.com/sindresorhus/pure)
@@ -76,7 +88,5 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 ### Tools
 
-* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for pretty diffs
 * [z](https://github.com/rupa/z) for quick directory switching (the new `j`)
-* [fzf](https://github.com/junegunn/fzf) for nicer finding
 * [k](https://github.com/supercrabtree/k) is a nicer, git-aware `ls`
