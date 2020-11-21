@@ -14,8 +14,6 @@ zinit load djui/alias-tips
 # Git
 zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit ice as"program"
-zinit snippet https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
 
 # Node
 zinit load lukechilds/zsh-nvm

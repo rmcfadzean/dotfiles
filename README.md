@@ -51,7 +51,7 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 ### Git
 
 * The start of a nice ignore and some defaults
-* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) for pretty diffs
+* [delta](https://github.com/dandavison/delta) for pretty diffs
 
 
 ### ZSH
