@@ -4,7 +4,7 @@
 [core]
   excludesfile = ~/.gitignore.global
   pager = delta
-  editor = nano
+	editor = code --wait
 
 [interactive]
   diffFilter = delta --color-only
