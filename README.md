@@ -46,13 +46,9 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 ### Node.js
 
-* Use [NVM](https://github.com/creationix/nvm) to manage node versions
+* Use [FNM](https://github.com/Schniz/fnm) to manage node versions (Works with `.node-version` and `.nvmrc` files and faster than NVM!)
 
 ### Git
-
-#### Requirements
-
-* Install [delta](https://github.com/dandavison/delta) with your package manager of choice
 
 #### Config
 
@@ -62,16 +58,12 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 ### ZSH
 
-#### Requirements
-
-* Install [fzf](https://github.com/junegunn/fzf)
-
 #### Config
 
 * Plugins managed with [zinit](https://github.com/zdharma/zinit)
 * Case insensitive autocomplete
 * A collection of [aliases](../blob/master/zsh/.zsh/aliases.zsh)
-* Theme is [pure](https://github.com/sindresorhus/pure)
+* Prompt is [Starship](https://starship.rs/) (Note: Also run `stow starship` if you want the included prompt. Otherwise configure your own)
 
 ### Tmux
 
@@ -90,3 +82,8 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 * [z](https://github.com/rupa/z) for quick directory switching (the new `j`)
 * [k](https://github.com/supercrabtree/k) is a nicer, git-aware `ls`
+* [direnv](https://direnv.net/) for loading env vars from `.envrc`
+* [tokei](https://github.com/XAMPPRocky/tokei) code stats
+* [bat](https://github.com/sharkdp/bat) like `cat` but nicer
+* [fzf](https://github.com/junegunn/fzf-bin) included!
+* [delta](https://github.com/dandavison/delta) included!
