@@ -1,16 +1,17 @@
 if [ -z "$HISTFILE" ]; then
-  HISTFILE=$HOME/.zhistory
+  export HISTFILE=$HOME/.zhistory
 fi
 
-HISTSIZE=10000
-SAVEHIST=10000
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTORY_IGNORE="(pwd|l[sal]|rm|mv|shutdown|exit|rmdir|ag|tree|code|cloc|wc)"
 
 # Show history
 case $HIST_STAMPS in
-  "mm/dd/yyyy") alias history='fc -fl 1' ;;
-  "dd.mm.yyyy") alias history='fc -El 1' ;;
-  "yyyy-mm-dd") alias history='fc -il 1' ;;
-  *) alias history='fc -l 1' ;;
+"mm/dd/yyyy") alias history='fc -fl 1' ;;
+"dd.mm.yyyy") alias history='fc -El 1' ;;
+"yyyy-mm-dd") alias history='fc -il 1' ;;
+*) alias history='fc -l 1' ;;
 esac
 
 setopt append_history

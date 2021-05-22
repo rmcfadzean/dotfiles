@@ -80,7 +80,7 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 ### Tools
 
-* [z](https://github.com/rupa/z) for quick directory switching (the new `j`)
+* [zoxide](https://github.com/ajeetdsouza/zoxide) for quick directory switching (the new ~~`j`~~ [z](https://github.com/rupa/z))
 * [k](https://github.com/supercrabtree/k) is a nicer, git-aware `ls`
 * [direnv](https://direnv.net/) for loading env vars from `.envrc`
 * [tokei](https://github.com/XAMPPRocky/tokei) code stats

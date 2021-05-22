@@ -49,9 +49,6 @@ zinit snippet OMZ::plugins/aws/aws.plugin.zsh
 # Tmux
 zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
-# Fast folder jumps
-zinit load agkozak/zsh-z
-
 # A much nicer Ctrl-R history searcher
 zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
 
@@ -85,3 +82,8 @@ zinit light sharkdp/bat
 
 zinit ice depth"1" wait lucid from"gh-r" as"program" mv"delta* -> delta" pick"delta/delta"
 zinit light dandavison/delta
+
+zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
+  bpick"*x86_64-unknown-linux*" \
+  pick"zoxide/zoxide" atload"source <(zoxide init zsh --no-aliases)"
+zinit light ajeetdsouza/zoxide
