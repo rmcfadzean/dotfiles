@@ -9,20 +9,20 @@ zinit wait lucid for \
 zinit light rimraf/k
 
 # Ansible
-zinit snippet OMZ::plugins/ansible/ansible.plugin.zsh
+zinit snippet OMZP::ansible
 
 # Remembering all the aliases is hard sometimes...
 zinit load djui/alias-tips
 
 # Git
 zinit snippet OMZ::lib/git.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZP::git
 
 # Node
 ## FNM
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
   "dominik-schwabe/zsh-fnm"
-zinit snippet OMZ::plugins/yarn/yarn.plugin.zsh
+zinit snippet OMZP::yarn
 
 # Direnv
 zinit from"gh-r" as"program" mv"direnv* -> direnv" \
@@ -31,26 +31,19 @@ zinit from"gh-r" as"program" mv"direnv* -> direnv" \
   "direnv/direnv"
 
 # Vagrant
-zinit ice as"completion"
-zinit snippet OMZ::plugins/vagrant/_vagrant
+zinit snippet OMZP::vagrant
 
 # Docker
-zinit ice as"completion"
-zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-zinit ice as"completion"
-zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
-
-zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+zinit snippet OMZP::docker-compose
 
 # AWS
-zinit ice as"completion"
-zinit snippet OMZ::plugins/aws/aws.plugin.zsh
+zinit snippet OMZP::aws
 
 # Tmux
-zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
+zinit snippet OMZP::tmux
 
 # A much nicer Ctrl-R history searcher
-zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
+zinit snippet OMZP::fzf
 
 zinit ice lucid wait'!0'
 zinit light 'b4b4r07/enhancd'
@@ -66,7 +59,7 @@ zinit light chrissicool/zsh-256color
 zinit ice wait lucid
 zinit light hlissner/zsh-autopair
 zinit light mafredri/zsh-async
-zinit snippet OMZ::plugins/rsync/rsync.plugin.zsh
+zinit snippet OMZP::rsync
 
 zinit ice as"command" from"gh-r" bpick"*linux-gnu*" pick"tokei/tokei"
 zinit light XAMPPRocky/tokei
