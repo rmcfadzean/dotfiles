@@ -12,9 +12,12 @@ export NVM_AUTO_USE=true
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
 
-export DISTRIB_ID=`( source /etc/os-release; echo $ID )`
+export DISTRIB_ID=$( (
+  source /etc/os-release
+  echo $ID
+))
 
 export PROJECTS=$HOME/Projects
 
 export GOPATH=$PROJECTS/go
-export PATH=$GOPATH/bin:$HOME/.local/bin/:$PATH
+export PATH=$GOPATH/bin:$HOME/.local/bin/:/home/rob/.yarn/bin:$PATH
