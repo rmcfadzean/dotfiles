@@ -24,6 +24,9 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
   "dominik-schwabe/zsh-fnm"
 zinit snippet OMZP::yarn
 
+zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
+zinit light g-plane/zsh-yarn-autocompletions
+
 # Direnv
 zinit from"gh-r" as"program" mv"direnv* -> direnv" \
   atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
