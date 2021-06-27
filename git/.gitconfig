@@ -54,3 +54,6 @@
 	autocorrect = 1
 [init]
 	defaultBranch = main
+
+[alias]
+  oops = commit --amend --reuse-message=HEAD
