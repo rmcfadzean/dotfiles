@@ -15,7 +15,7 @@ zinit snippet OMZP::ansible
 zinit load djui/alias-tips
 
 # Git
-zinit snippet OMZ::lib/git.zsh
+# zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZP::git
 
 # Node
@@ -24,8 +24,8 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
   "dominik-schwabe/zsh-fnm"
 zinit snippet OMZP::yarn
 
-zinit ice atload"zpcdreplay" atclone'./zplug.zsh'
-zinit light g-plane/zsh-yarn-autocompletions
+zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for \
+  "g-plane/zsh-yarn-autocompletions"
 
 # Direnv
 zinit from"gh-r" as"program" mv"direnv* -> direnv" \
@@ -64,22 +64,21 @@ zinit light hlissner/zsh-autopair
 zinit light mafredri/zsh-async
 zinit snippet OMZP::rsync
 
-zinit ice as"command" from"gh-r" bpick"*linux-gnu*" pick"tokei/tokei"
+zinit ice as"command" from"gh-r" pick"tokei/tokei"
 zinit light XAMPPRocky/tokei
 
-zinit ice as"command" from"gh-r" bpick"*linux-gnu*" mv"hyperfine* -> hyperfine" pick"hyperfine/hyperfine"
+zinit ice as"command" from"gh-r" mv"hyperfine* -> hyperfine" pick"hyperfine/hyperfine"
 zinit light sharkdp/hyperfine
 
 zinit ice from"gh-r" as"program"
 zinit light junegunn/fzf-bin
 
-zinit ice as"command" from"gh-r" bpick"*linux-gnu*" mv"bat* -> bat" pick"bat/bat"
+zinit ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
 zinit ice depth"1" wait lucid from"gh-r" as"program" mv"delta* -> delta" pick"delta/delta"
 zinit light dandavison/delta
 
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
-  bpick"*x86_64-unknown-linux*" \
   pick"zoxide/zoxide" atload"source <(zoxide init zsh --no-aliases)"
 zinit light ajeetdsouza/zoxide

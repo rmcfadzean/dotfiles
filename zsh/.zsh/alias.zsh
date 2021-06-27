@@ -28,6 +28,8 @@ alias serve="python3 -m http.server 8005"
 alias z='__zoxide_z'
 alias ziz='__zoxide_zi'
 
+alias dmesg='journalctl --dmesg -o short --no-hostname --no-pager'
+
 # usage: rmd README.md
 rmd() {
   pandoc $1 | lynx -stdin
