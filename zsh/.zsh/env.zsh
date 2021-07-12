@@ -21,3 +21,6 @@ export PROJECTS=$HOME/Projects
 
 export GOPATH=$PROJECTS/go
 export PATH=$GOPATH/bin:$HOME/.local/bin/:/home/rob/.yarn/bin:$PATH
+
+export RUBY_CONFIGURE_OPTS="--disable-install-doc"
+export RBENV_VERSION=2.7.4

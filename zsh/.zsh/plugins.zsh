@@ -82,3 +82,22 @@ zinit light dandavison/delta
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
   pick"zoxide/zoxide" atload"source <(zoxide init zsh --no-aliases)"
 zinit light ajeetdsouza/zoxide
+
+
+## Ruby
+
+# Install rbenv
+zinit ice wait lucid as'program' pick'bin/rbenv' from'gh' \
+  atclone'src/configure && make -C src; libexec/rbenv init - > .zinitrc.zsh' \
+  atpull'%atclone' src'.zinitrc.zsh' nocompile'!'
+zinit light rbenv/rbenv
+
+# install ruby-build
+zinit ice wait lucid as'program' pick'bin/ruby-build' from'gh'
+zinit light rbenv/ruby-build
+
+zinit wait lucid for \
+  OMZP::ruby \
+  OMZP::bundler \
+  OMZP::rbenv \
+  OMZP::gem
