@@ -9,5 +9,3 @@ source ~/.zinit/bin/zinit.zsh
 # For all your local configs.
 ### DO NOT CHECK THIS FILE IN TO GIT!
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-compinit

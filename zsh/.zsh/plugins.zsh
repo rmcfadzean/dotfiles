@@ -1,11 +1,3 @@
-zinit wait lucid for \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-  zdharma/fast-syntax-highlighting \
-  blockf \
-  zsh-users/zsh-completions \
-  atload"!_zsh_autosuggest_start" \
-  zsh-users/zsh-autosuggestions
-
 zinit light rimraf/k
 
 # Ansible
@@ -117,3 +109,12 @@ zinit light ducaale/xh
 # glow - CLI markdown reader
 zinit ice wait lucid as"program" pick"glow*/glow" from"gh-r" bpick'*.tar.gz'
 zinit light charmbracelet/glow
+
+# Keep this one last so we are sure we get our compinit etc. yay turbo.
+zinit wait lucid for \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+  zdharma/fast-syntax-highlighting \
+  blockf \
+  zsh-users/zsh-completions \
+  atload"!_zsh_autosuggest_start" \
+  zsh-users/zsh-autosuggestions
