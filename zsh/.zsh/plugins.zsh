@@ -101,3 +101,19 @@ zinit wait lucid for \
   OMZP::bundler \
   OMZP::rbenv \
   OMZP::gem
+
+# DUF - a modern df
+zinit ice wait lucid as"program" mv"duf* -> duf" pick"duf/duf" from"gh-r" bpick'*.tar.gz'
+zinit light muesli/duf
+
+# dust - a modern du
+zinit ice wait lucid as"program" mv"dust*/dust -> dust" pick"dust" from"gh-r"
+zinit light bootandy/dust
+
+# xh - a nicer http client
+zinit ice wait lucid as"program" mv"xh* -> xh" pick"xh/xh" from"gh-r"
+zinit light ducaale/xh
+
+# glow - CLI markdown reader
+zinit ice wait lucid as"program" pick"glow*/glow" from"gh-r" bpick'*.tar.gz'
+zinit light charmbracelet/glow

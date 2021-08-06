@@ -42,3 +42,6 @@ gh() {
   git_directory=$(git rev-parse --show-prefix)
   xdg-open ${git_project_root}/tree/${git_branch}/${git_directory}${file}
 }
+
+alias du='dust'
+alias df='duf'
