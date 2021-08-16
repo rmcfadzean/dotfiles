@@ -13,3 +13,7 @@ format = "via [🤖 $version](bold green) "
 
 [hostname]
 format =  "on [$hostname](bold red) "
+
+[memory_usage]
+disabled = false
+threshold = -1
