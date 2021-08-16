@@ -12,7 +12,7 @@ zinit snippet OMZP::git
 
 # Node
 ## FNM
-zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
+zinit wait lucid atload"zicompinit; zicdreplay" atload"!eval \$(fnm env --use-on-cd)" blockf for \
   "dominik-schwabe/zsh-fnm"
 zinit snippet OMZP::yarn
 
@@ -74,7 +74,6 @@ zinit light dandavison/delta
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
   pick"zoxide/zoxide" atload"source <(zoxide init zsh --no-aliases)"
 zinit light ajeetdsouza/zoxide
-
 
 ## Ruby
 
