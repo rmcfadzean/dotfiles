@@ -23,7 +23,8 @@ zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for 
 zinit from"gh-r" as"program" mv"direnv* -> direnv" \
   atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
   pick"direnv" src="zhook.zsh" for \
-  "direnv/direnv"
+  "direnv/direnv" \
+  OMZP::direnv
 
 # Vagrant
 zinit snippet OMZP::vagrant
@@ -117,3 +118,12 @@ zinit wait lucid for \
   zsh-users/zsh-completions \
   atload"!_zsh_autosuggest_start" \
   zsh-users/zsh-autosuggestions
+
+# asdf - maybe use this going forward instead of FNM? added for PHP version management
+zinit ice as'program' src'asdf.sh'
+zinit light asdf-vm/asdf
+
+# PHP :(
+zinit wait lucid for \
+  OMZP::wp-cli \
+  OMZP::composer
