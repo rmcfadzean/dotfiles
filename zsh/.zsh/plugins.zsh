@@ -13,8 +13,9 @@ zinit snippet OMZP::git
 # Node
 ## FNM
 zinit wait lucid atload"zicompinit; zicdreplay" atload"!eval \$(fnm env --use-on-cd)" blockf for \
-  "dominik-schwabe/zsh-fnm"
-zinit snippet OMZP::yarn
+  "dominik-schwabe/zsh-fnm" \
+  OMZP::yarn \
+  OMZP::npm
 
 zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for \
   "g-plane/zsh-yarn-autocompletions"
