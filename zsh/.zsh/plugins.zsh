@@ -129,3 +129,6 @@ zinit light asdf-vm/asdf
 zinit wait lucid for \
   OMZP::wp-cli \
   OMZP::composer
+
+zinit ice wait lucid as"program" from"gh-r" bpick"*.tar.gz" mv"task* -> task" pick"task/task"
+zinit light "go-task/task"
