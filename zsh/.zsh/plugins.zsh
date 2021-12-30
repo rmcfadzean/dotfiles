@@ -23,11 +23,11 @@ zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for 
   "g-plane/zsh-yarn-autocompletions"
 
 # Direnv
-zinit from"gh-r" as"program" mv"direnv* -> direnv" \
-  atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-  pick"direnv" src="zhook.zsh" for \
-  "direnv/direnv" \
-  OMZP::direnv
+# zinit from"gh-r" as"program" mv"direnv* -> direnv" \
+#   atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
+#   pick"direnv" src="zhook.zsh" for \
+#   "direnv/direnv" \
+#   OMZP::direnv
 
 # Vagrant
 zinit snippet OMZP::vagrant
@@ -115,7 +115,7 @@ zinit light charmbracelet/glow
 # Keep this one last so we are sure we get our compinit etc. yay turbo.
 zinit wait lucid for \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-  zdharma/fast-syntax-highlighting \
+  zdharma-continuum/fast-syntax-highlighting \
   blockf \
   zsh-users/zsh-completions \
   atload"!_zsh_autosuggest_start" \
