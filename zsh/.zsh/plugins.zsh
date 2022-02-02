@@ -13,11 +13,6 @@ zinit snippet OMZP::git
 # Node
 zinit snippet OMZP::yarn
 zinit snippet OMZP::npm
-## FNM
-# zinit wait lucid atload"zicompinit; zicdreplay" atload"!eval \$(fnm env --use-on-cd)" blockf for \
-#   "dominik-schwabe/zsh-fnm" \
-#   OMZP::yarn \
-#   OMZP::npm
 
 zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for \
   "g-plane/zsh-yarn-autocompletions"
@@ -78,23 +73,6 @@ zinit light dandavison/delta
 zinit ice as"command" from"gh-r" mv"zoxide* -> zoxide" \
   pick"zoxide/zoxide" atload"source <(zoxide init zsh --no-aliases)"
 zinit light ajeetdsouza/zoxide
-
-## Ruby
-
-# Install rbenv
-# zinit ice wait lucid as'program' pick'bin/rbenv' from'gh' \
-#   atclone'src/configure && make -C src; libexec/rbenv init - > .zinitrc.zsh' \
-#   atpull'%atclone' src'.zinitrc.zsh' nocompile'!'
-# zinit light rbenv/rbenv
-
-# install ruby-build
-# zinit ice wait lucid as'program' pick'bin/ruby-build' from'gh'
-# zinit light rbenv/ruby-build
-
-# zinit wait lucid for \
-#   OMZP::ruby \
-#   OMZP::bundler \
-#   OMZP::gem
 
 # DUF - a modern df
 zinit ice wait lucid as"program" mv"duf* -> duf" pick"duf/duf" from"gh-r" bpick'*.tar.gz'

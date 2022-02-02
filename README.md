@@ -59,7 +59,7 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 #### Config
 
-- Plugins managed with [zinit](https://github.com/zdharma/zinit)
+- Plugins managed with [zinit (continuum)](https://github.com/zdharma-continuum/zinit)
 - Case insensitive autocomplete
 - A collection of [aliases](../blob/master/zsh/.zsh/aliases.zsh)
 - Prompt is [Starship](https://starship.rs/) (Note: Also run `stow starship` if you want the included prompt. Otherwise configure your own)
