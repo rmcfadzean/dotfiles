@@ -24,9 +24,8 @@
 [include]
   path = ~/.gitconfig.local
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-  insteadOf = "github:"
+[url "https://github.com"]
+	insteadOf = git://github.com
 
 [url "git@gist.github.com:"]
   insteadOf = "gst:"
