@@ -6,3 +6,4 @@ set tabstospaces
 set regexp
 
 set constantshow
+set nonewlines

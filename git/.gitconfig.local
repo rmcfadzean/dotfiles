@@ -1,9 +1,0 @@
-[user]
-  email = rob@northxsouth.co
-  name = Rob McFadzean
-
-[github]
-  user = rmcfadzean
-
-[include]
-  path = /home/rob/.config/netlify/helper/git-config
