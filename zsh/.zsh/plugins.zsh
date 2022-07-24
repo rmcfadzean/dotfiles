@@ -17,15 +17,11 @@ zinit snippet OMZP::npm
 zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for \
   "g-plane/zsh-yarn-autocompletions"
 
-# Direnv
-# zinit from"gh-r" as"program" mv"direnv* -> direnv" \
-#   atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
-#   pick"direnv" src="zhook.zsh" for \
-#   "direnv/direnv" \
-#   OMZP::direnv
-
 # Vagrant
 zinit snippet OMZP::vagrant
+
+# Terraform
+zinit snippet OMZP::terraform
 
 # Docker
 zinit snippet OMZP::docker-compose
@@ -110,3 +106,4 @@ zinit wait lucid for \
 
 zinit ice wait lucid as"program" from"gh-r" bpick"*.tar.gz" mv"task* -> task" pick"task/task"
 zinit light "go-task/task"
+
