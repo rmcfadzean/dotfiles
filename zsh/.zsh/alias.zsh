@@ -1,6 +1,6 @@
-alias ll="k -h"
-alias ls="k -h"
-alias lsl="k -h"
+alias ll="exa -l --git"
+alias ls="exa -l --git"
+alias lsl="exa -l --git"
 
 alias cp="cp -r"
 alias scp="scp -r"

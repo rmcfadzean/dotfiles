@@ -1,4 +1,4 @@
-zinit light rimraf/k
+# zinit light rimraf/k
 
 # Ansible
 zinit snippet OMZP::ansible
@@ -6,9 +6,24 @@ zinit snippet OMZP::ansible
 # Remembering all the aliases is hard sometimes...
 zinit load djui/alias-tips
 
+# exa
+## https://github.com/ogham/exa
+zinit ice wait lucid as"program" from"gh-r" mv"bin -> exa" pick"exa/exa"
+zinit light ogham/exa
+
 # Git
+
 # zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZP::git
+# github cli
+## https://github.com/cli/cli
+zinit ice wait lucid as"program" from"gh-r" pick"usr/bin/gh"
+zinit light cli/cli
+
+# git open
+## https://github.com/paulirish/git-open
+zinit ice wait lucid
+zinit light paulirish/git-open
 
 # Node
 zinit snippet OMZP::yarn
@@ -21,7 +36,11 @@ zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for 
 zinit snippet OMZP::vagrant
 
 # Terraform
+zinit ice wait'4' lucid as"completion"
+zinit snippet OMZ::plugins/terraform/_terraform
 zinit snippet OMZP::terraform
+zinit ice wait'2' lucid as"program" from:"gh-r" has"terraform"
+zinit light terraform-linters/tflint
 
 # Docker
 zinit snippet OMZP::docker-compose
@@ -106,4 +125,3 @@ zinit wait lucid for \
 
 zinit ice wait lucid as"program" from"gh-r" bpick"*.tar.gz" mv"task* -> task" pick"task/task"
 zinit light "go-task/task"
-
