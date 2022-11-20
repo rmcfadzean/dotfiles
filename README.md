@@ -48,6 +48,10 @@ Run `stow [package]` for each `package` you want to install. For example to inst
 
 - Use [FNM](https://github.com/Schniz/fnm) to manage node versions (Works with `.node-version` and `.nvmrc` files and faster than NVM!)
 
+### Bins
+
+Some helpful scripts. View the files in the [`bins`](./bins/) directory for more info.
+
 ### Git
 
 #### Config

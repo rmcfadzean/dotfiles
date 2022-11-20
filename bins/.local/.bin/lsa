@@ -1,0 +1,30 @@
+#!/bin/bash
+
+SCRIPT_NAME=$(basename "$BASH_SOURCE")
+
+if [ "${*}" == "" ]; then
+  echo "Usage: $SCRIPT_NAME filePath [filePath ...]"
+  exit 1
+fi
+
+for FILE in "$@"; do
+  if [ -f "$FILE" ]; then
+    case "$FILE" in
+    *.tar.bz2) tar -jtvf "$FILE" ;;
+    *.tar.gz) tar -ztvf "$FILE" ;;
+    *.tar.xz) tar -Jtvf "$FILE" ;;
+    *.bz2) bz2 - "$FILE" ;;
+    *.rar) unrar lb "$FILE" ;;
+    *.tar) tar -tvf "$FILE" ;;
+    *.tbz2) tar -jtvf "$FILE" ;;
+    *.tgz) tar -ztvf "$FILE" ;;
+    *.zip) unzip -l "$FILE" ;;
+    *.gz) gunzip --list "$FILE" ;;
+    *.Z) gunzip --list "$FILE" ;;
+    *.7z) 7z l "$FILE" ;;
+    *) echo "'$FILE' cannot be listed via ${SCRIPT_NAME}" ;;
+    esac
+  else
+    echo "'$FILE' is not a valid file"
+  fi
+done
