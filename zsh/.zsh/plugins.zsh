@@ -58,7 +58,7 @@ zinit ice as"command" from"gh-r" mv"hyperfine* -> hyperfine" pick"hyperfine/hype
 zinit light sharkdp/hyperfine
 
 zinit ice from"gh-r" as"program"
-zinit light junegunn/fzf-bin
+zinit light junegunn/fzf
 
 zinit ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
@@ -77,6 +77,12 @@ zinit light muesli/duf
 # dust - a modern du
 zinit ice wait lucid as"program" mv"dust*/dust -> dust" pick"dust" from"gh-r"
 zinit light bootandy/dust
+
+zinit ice wait lucid as"program"  mv"pdu* -> pdu" bpick"pdu-x86_64-unknown-linux-gnu" from"gh-r"
+zinit light KSXGitHub/parallel-disk-usage
+
+zinit ice lucid as'completion'
+zinit snippet https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.8.2/completion.zsh
 
 # xh - a nicer http client
 zinit ice wait lucid as"program" mv"xh* -> xh" pick"xh/xh" from"gh-r"
