@@ -36,8 +36,6 @@ zinit wait lucid atload"zicompinit; zicdreplay" atclone'./zplug.zsh' blockf for 
 zinit snippet OMZP::vagrant
 
 # Terraform
-zinit ice wait'4' lucid as"completion"
-zinit snippet OMZ::plugins/terraform/_terraform
 zinit snippet OMZP::terraform
 zinit ice wait'2' lucid as"program" from:"gh-r" has"terraform"
 zinit light terraform-linters/tflint
