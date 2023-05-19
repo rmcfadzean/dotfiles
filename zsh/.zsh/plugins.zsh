@@ -1,10 +1,21 @@
-# zinit light rimraf/k
+zinit wait="1" lucid for \
+    OMZL::clipboard.zsh \
+    OMZL::git.zsh \
+    OMZP::systemd/systemd.plugin.zsh \
+    OMZP::git/git.plugin.zsh
+
+zinit ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
+zinit light sharkdp/fd
+
+zinit as="completion" for \
+    OMZP::fd/_fd
 
 # Ansible
 zinit snippet OMZP::ansible
 
 # Remembering all the aliases is hard sometimes...
 zinit load djui/alias-tips
+zinit snippet OMZP::aliases
 
 # exa
 ## https://github.com/ogham/exa
@@ -12,9 +23,6 @@ zinit ice wait lucid as"program" from"gh-r" mv"bin -> exa" pick"exa/exa"
 zinit light ogham/exa
 
 # Git
-
-# zinit snippet OMZ::lib/git.zsh
-zinit snippet OMZP::git
 # github cli
 ## https://github.com/cli/cli
 zinit ice wait lucid as"program" from"gh-r" pick"usr/bin/gh"
@@ -40,6 +48,10 @@ zinit snippet OMZP::terraform
 zinit ice wait'2' lucid as"program" from:"gh-r" has"terraform"
 zinit light terraform-linters/tflint
 
+# Python
+zinit snippet OMZP::python
+zinit snippet OMZP::pip
+
 # Docker
 zinit snippet OMZP::docker-compose
 
@@ -54,11 +66,12 @@ zinit snippet OMZP::fzf
 
 zinit ice lucid wait'!0'
 zinit light 'b4b4r07/enhancd'
+
 # Theme
 ## Starship prompt
-zinit ice lucid from"gh-r" \
-  as"command" pick"starship" \
-  atload"!eval \$(starship init zsh)"
+zinit ice as"command" from"gh-r" \
+      atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+      atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 # Misc
@@ -95,12 +108,6 @@ zinit light muesli/duf
 zinit ice wait lucid as"program" mv"dust*/dust -> dust" pick"dust" from"gh-r"
 zinit light bootandy/dust
 
-zinit ice wait lucid as"program"  mv"pdu* -> pdu" bpick"pdu-x86_64-unknown-linux-gnu" from"gh-r"
-zinit light KSXGitHub/parallel-disk-usage
-
-zinit ice lucid as'completion'
-zinit snippet https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.8.2/completion.zsh
-
 # xh - a nicer http client
 zinit ice wait lucid as"program" mv"xh* -> xh" pick"xh/xh" from"gh-r"
 zinit light ducaale/xh
@@ -108,15 +115,6 @@ zinit light ducaale/xh
 # glow - CLI markdown reader
 zinit ice wait lucid as"program" pick"glow*/glow" from"gh-r" bpick'*.tar.gz'
 zinit light charmbracelet/glow
-
-# Keep this one last so we are sure we get our compinit etc. yay turbo.
-zinit wait lucid for \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-  zdharma-continuum/fast-syntax-highlighting \
-  blockf \
-  zsh-users/zsh-completions \
-  atload"!_zsh_autosuggest_start" \
-  zsh-users/zsh-autosuggestions
 
 # asdf - maybe use this going forward instead of FNM? added for PHP version management
 zinit ice as'program' src'asdf.sh'
@@ -129,3 +127,12 @@ zinit wait lucid for \
 
 zinit ice wait lucid as"program" from"gh-r" bpick"*.tar.gz" mv"task* -> task" pick"task/task"
 zinit light "go-task/task"
+
+# Keep this one last so we are sure we get our compinit etc. yay turbo.
+zinit wait lucid for \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+  zdharma-continuum/fast-syntax-highlighting \
+  blockf \
+  zsh-users/zsh-completions \
+  atload"!_zsh_autosuggest_start" \
+  zsh-users/zsh-autosuggestions

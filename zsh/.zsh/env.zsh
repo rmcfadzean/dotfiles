@@ -24,3 +24,5 @@ export PATH=$GOPATH/bin:$HOME/.local/bin/:$HOME/.yarn/bin:$HOME/.local/.bin:$PAT
 
 export RUBY_CONFIGURE_OPTS="--disable-install-doc"
 export RBENV_VERSION=2.7.4
+
+export STORYBOOK_DISABLE_TELEMETRY=1
