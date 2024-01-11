@@ -125,9 +125,6 @@ zinit wait lucid for \
   OMZP::wp-cli \
   OMZP::composer
 
-zinit ice wait lucid as"program" from"gh-r" bpick"*.tar.gz" mv"task* -> task" pick"task/task"
-zinit light "go-task/task"
-
 # Keep this one last so we are sure we get our compinit etc. yay turbo.
 zinit wait lucid for \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
