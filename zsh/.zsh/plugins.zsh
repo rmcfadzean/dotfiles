@@ -17,10 +17,10 @@ zinit snippet OMZP::ansible
 zinit load djui/alias-tips
 zinit snippet OMZP::aliases
 
-# exa
-## https://github.com/ogham/exa
-zinit ice wait lucid as"program" from"gh-r" mv"bin -> exa" pick"exa/exa"
-zinit light ogham/exa
+# eza
+## https://github.com/eza-community/eza
+zinit ice wait lucid as"program" from"gh-r" pick"eza"
+zinit light eza-community/eza
 
 # Git
 # github cli
@@ -51,6 +51,9 @@ zinit light terraform-linters/tflint
 # Python
 zinit snippet OMZP::python
 zinit snippet OMZP::pip
+if command -v pdm > /dev/null 2>&1; then
+  pdm completion zsh > "$HOME/.local/share/zinit/completions/_pdm"
+fi
 
 # Docker
 zinit snippet OMZP::docker-compose
@@ -133,3 +136,4 @@ zinit wait lucid for \
   zsh-users/zsh-completions \
   atload"!_zsh_autosuggest_start" \
   zsh-users/zsh-autosuggestions
+
