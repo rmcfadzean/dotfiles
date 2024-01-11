@@ -1,6 +1,6 @@
-alias ll="exa -l --git"
-alias ls="exa -l --git"
-alias lsl="exa -l --git"
+alias ll="eza -l --git"
+alias ls="eza -l --git"
+alias lsl="eza -l --git"
 
 alias cp="cp -r"
 alias scp="scp -r"
@@ -27,6 +27,9 @@ alias serve="python3 -m http.server 8005"
 
 alias z='__zoxide_z'
 alias ziz='__zoxide_zi'
+
+# One-liner to erve the current directory 
+alias servedir='python -m http.server 8000'
 
 alias dmesg='journalctl --dmesg -o short --no-hostname --no-pager'
 
