@@ -13,7 +13,6 @@ format = "via [🤖 $version](bold green) "
 
 [hostname]
 format =  "on [$hostname](bold red) "
-ssh_symbol = "🔒"
 
 [memory_usage]
 disabled = false
