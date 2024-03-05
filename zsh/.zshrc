@@ -26,6 +26,3 @@ autoload -Uz _zinit
 # For all your local configs.
 ### DO NOT CHECK THIS FILE IN TO GIT!
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

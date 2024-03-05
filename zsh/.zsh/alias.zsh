@@ -1,7 +1,3 @@
-alias ll="eza -l --git"
-alias ls="eza -l --git"
-alias lsl="eza -l --git"
-
 alias cp="cp -r"
 alias scp="scp -r"
 alias mkdir="mkdir -p"
@@ -13,8 +9,6 @@ alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-pa
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
 
 alias cloc='tokei'
-
-alias systemctl="sudo systemctl"
 
 alias p="cd $PROJECTS"
 
@@ -38,7 +32,8 @@ rmd() {
   pandoc $1 | lynx -stdin
 }
 
-gh() {
+# The official github cli client uses `gh` so this should not be that.
+gho() {
   file=${1:-""}
   git_branch=${2:-$(git symbolic-ref --quiet --short HEAD)}
   git_project_root=$(git config remote.origin.url | sed "s~git@\(.*\):\(.*\)~https://\1/\2~" | sed "s~\(.*\).git\$~\1~")
@@ -46,5 +41,20 @@ gh() {
   xdg-open ${git_project_root}/tree/${git_branch}/${git_directory}${file}
 }
 
-alias du='dust'
-alias df='duf'
+if [[ -x "$(command -v bat)" ]]; then
+  alias cat="bat"
+fi
+
+if [[ -x "$(command -v eza)" ]]; then
+  alias ll="eza -l --git"
+  alias ls="eza -l --git"
+  alias lsl="eza -l --git"
+fi
+
+if [[ -x "$(command -v dust)" ]]; then
+  alias du="dust"
+fi
+
+if [[ -x "$(command -v duf)" ]]; then
+  alias df="duf"
+fi
