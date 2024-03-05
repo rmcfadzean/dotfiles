@@ -12,7 +12,8 @@ disabled = true
 format = "via [🤖 $version](bold green) "
 
 [hostname]
-format =  "on [$hostname](bold red) "
+format =  "on [$ssh_symbol$hostname](bold red) "
+ssh_symbol = "🔒"
 
 [memory_usage]
 disabled = false
