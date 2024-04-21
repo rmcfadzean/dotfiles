@@ -40,8 +40,8 @@ fi
 
 # jq
 if [[ ! -x "$(command -v jq)" ]]; then
-  zinit ice wait lucid as"program" from"gh-r" pick"stedolan/jq"
-  zinit light stedolan/jq
+  zinit ice wait lucid as"program" from"gh-r" pick"jqlang/jq"
+  zinit light jqlang/jq
 fi
 
 # Git
