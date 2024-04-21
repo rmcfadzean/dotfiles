@@ -26,3 +26,7 @@ export RUBY_CONFIGURE_OPTS="--disable-install-doc"
 export RBENV_VERSION=2.7.4
 
 export STORYBOOK_DISABLE_TELEMETRY=1
+
+if [ -d "$HOME/.local/share" ] ; then
+  export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
+fi

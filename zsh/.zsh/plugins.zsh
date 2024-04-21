@@ -1,8 +1,20 @@
 zinit wait="1" lucid for \
-    OMZL::clipboard.zsh \
-    OMZL::git.zsh \
-    OMZP::systemd/systemd.plugin.zsh \
-    OMZP::git/git.plugin.zsh
+  OMZL::clipboard.zsh \
+  OMZL::git.zsh \
+  OMZP::systemd/systemd.plugin.zsh \
+  OMZP::git/git.plugin.zsh
+
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
+zinit light zdharma-continuum/zinit-annex-patch-dl
+
+zinit ice \
+  bindmap"^B -> ^H" \
+  lucid \
+  trackbinds \
+  wait"3"
+zinit light @zdharma-continuum/zbrowse
+
+zinit load zdharma-continuum/zui
 
 if [[ ! -x "$(command -v fd)" ]]; then
   zinit ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
@@ -10,7 +22,7 @@ if [[ ! -x "$(command -v fd)" ]]; then
 fi
 
 zinit as="completion" for \
-    OMZP::fd/_fd
+  OMZP::fd/_fd
 
 # Ansible
 zinit snippet OMZP::ansible
@@ -28,8 +40,8 @@ fi
 
 # jq
 if [[ ! -x "$(command -v jq)" ]]; then
-  zinit ice wait lucid as"program" from"gh-r" pick"stedolan/jq"
-  zinit light stedolan/jq
+  zinit ice wait lucid as"program" from"gh-r" pick"jqlang/jq"
+  zinit light jqlang/jq
 fi
 
 # Git
@@ -49,16 +61,16 @@ if [[ ! -x "$(command -v gh)" ]]; then
 fi
 
 # direnv
-zinit wait lucid light-mode for \
-  from'gh-r' \
-  as'program' \
-  mv'direnv* -> direnv' \
-  pick'direnv' \
-  atclone'./direnv hook zsh > zhook.zsh' \
+zinit from"gh-r" as"program" mv"direnv* -> direnv" \
+  atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
+  pick"direnv" src="zhook.zsh" for \
+  direnv/direnv
+
+zinit lucid id-as'pkgx/loader' for \
+  atclone'echo "source <(pkgx --shellcode)" > init.zsh' \
   atpull'%atclone' \
-  src'zhook.zsh' \
-  id-as'auto' \
-  @direnv/direnv
+  nocompile'' \
+  @zdharma-continuum/null
 
 # git open
 ## https://github.com/paulirish/git-open
@@ -83,8 +95,20 @@ zinit snippet OMZP::terraform
 # Python
 zinit snippet OMZP::python
 zinit snippet OMZP::pip
-if command -v pdm > /dev/null 2>&1; then
-  pdm completion zsh > "$HOME/.local/share/zinit/completions/_pdm"
+if command -v pdm >/dev/null 2>&1; then
+  pdm completion zsh >"$HOME/.local/share/zinit/completions/_pdm"
+fi
+
+# Poetry,tox
+zinit wait lucid light-mode for \
+  MichaelAquilina/zsh-autoswitch-virtualenv \
+  as"completion" \
+  sudosubin/zsh-poetry
+
+# Ruff completions
+if [[ $(command -v ruff) && ! -s "$HOME/.local/share/zinit/completions/_ruff" ]]; then
+  ruff generate-shell-completion zsh >"$HOME/.local/share/zinit/completions/_ruff"
+  zinit ice wait lucid as"completion" pick"ruff" src"$HOME/.local/share/zinit/completions/_ruff"
 fi
 
 zinit ice lucid wait'!0'
@@ -93,12 +117,13 @@ zinit light 'b4b4r07/enhancd'
 # Theme
 ## Starship prompt
 zinit ice as"command" from"gh-r" \
-      atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-      atpull"%atclone" src"init.zsh"
+  atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+  atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 # Misc
 zinit light chrissicool/zsh-256color
+zinit pack for ls_colors
 zinit ice wait lucid
 zinit light hlissner/zsh-autopair
 zinit light mafredri/zsh-async
@@ -110,10 +135,7 @@ zinit light XAMPPRocky/tokei
 zinit ice as"command" from"gh-r" mv"hyperfine* -> hyperfine" pick"hyperfine/hyperfine"
 zinit light sharkdp/hyperfine
 
-if [[ ! -x "$(command -v fzf)" ]]; then
-  zinit ice from"gh-r" as"command"
-  zinit light junegunn/fzf-bin
-fi
+zinit pack"bgn-binary+keys" for fzf
 
 if [[ ! -x "$(command -v bat)" ]]; then
   zinit ice as"command" from"gh-r" mv"bat* -> bat" pick"bat/bat"
@@ -185,6 +207,6 @@ if [ -x "$(command -v tmux)" ]; then
 fi
 
 # A much nicer Ctrl-R history searcher
-zinit snippet OMZP::fzf
+# zinit snippet OMZP::fzf
 
 zinit snippet 'OMZP::extract'

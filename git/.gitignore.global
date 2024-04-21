@@ -19,3 +19,7 @@ Desktop.ini
 Thumbs.db
 
 .gitconfig
+
+.venv
+
+.secrets

@@ -58,3 +58,9 @@ fi
 if [[ -x "$(command -v duf)" ]]; then
   alias df="duf"
 fi
+
+# Poetry
+alias poi='poetry add'
+alias porm='poetry remove'
+alias poup='poetry update'
+alias poupg='poetry upgrade'

@@ -18,14 +18,13 @@
   file-style = bold yellow ul
   file-decoration-style = none
 
-[credential]
-  helper = cache --timeout=3600
-
 [include]
   path = ~/.gitconfig.local
 
 [url "https://github.com"]
   insteadOf = git://github.com
+  insteadOf = gh:
+  insteadOf = github:
 
 [url "git@gist.github.com:"]
   insteadOf = "gst:"
